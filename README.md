@@ -35,3 +35,4 @@ if __name__ == __main__:
 其中app = Flask(__name__)是創建一個Flask的物件，後面讓__name__的值為"__main__"時程式才執行，防止在執行過程中多執行或誤執行某些程式碼。
 '@'是pyhton 的裝飾器(Decorator)，相關資訊我會放在文章最後。
 ### Result
+![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/Flask1.png)
