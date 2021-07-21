@@ -49,7 +49,7 @@ def test():
 ```
 如果再剛才的主程式中加入這一段，程式執行後在網誌列後方加入"/test"就會出現這個分頁
 ### Result
-![image]()
+![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/Flask_route_test2.png)
 如果想讓兩個不同的route()連接到同一個function的話只要在原本route()的上或下接著輸入另一個即可。
 ```python3
 @app.route("/index") #新增
@@ -65,7 +65,7 @@ def user_name(name):
 	return f"My name is {name}"
 ```
 ### Result
-![image]()
+![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/route_variable3.png)
 而且你可以透過Flask中的converter來限制變數的型別。
 ```python3
 @app.route("/<int:id>") #如果id原本的型別是string，透過這裡就可以將其轉換成int的型別
@@ -73,8 +73,9 @@ def user_id(id):
 	return f"My id is {id}"
 ```
 Converter 種類：
-![image]()
+![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/converter_type4.png)
 copy from Flask documentation
+
 ### 透過"GET"、"POST"在html與Python間傳遞資料
 "GET"與"POST"都是傳遞資料，但有些許不同，Flask預設是以GET的方式傳送資料。
 
@@ -103,7 +104,8 @@ def submit():
 透過render_template可以讓Python選擇要連接到哪一個模板(html)當中，也可以順便將想要的變數傳遞到html當中進行處理(使用Jinja)。
 
 **當你有html檔案需要與Python做連結時，Flask預設要你將html的檔案都放在名為templates的資料夾中。**
-![image]()
+![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/Flask_Folder5.png)
+	
 假如此時你有一個名為home.html已經將UI、css等製作完成，你想要將Python與它做連結達到其他目的時可以這樣做。
 ```python3
 @app.route("/home")
