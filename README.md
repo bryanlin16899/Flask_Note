@@ -31,8 +31,10 @@ if __name__ == __main__:
 ```
 其中app = Flask(__name__)是創建一個Flask的物件，後面讓__name__的值為"__main__"時程式才執行，防止在執行過程中多執行或誤執行某些程式碼。
 '@'是pyhton 的裝飾器(Decorator)，相關資訊我會放在文章最後。
+
 ### Result
 ![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/Flask1.png)
+
 非常簡單的就建立好一個網頁了。
 ### Route()
 @app.route() 裝飾器讓程式知道緊接著後續的Function要載入到哪個URL中，最初始設定就是"/"，就是一般在URL中各個分開分頁或資料代號的"/"，如果再URL最後就不會顯示，所以上一個Result的URL才會是127.0.0.1:5000。                                                                (P.S 127.0.0.1:5000 是預設的本機地址
@@ -48,8 +50,10 @@ def test():
 #More code below
 ```
 如果再剛才的主程式中加入這一段，程式執行後在網誌列後方加入"/test"就會出現這個分頁
+
 ### Result
 ![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/Flask_route_test2.png)
+
 如果想讓兩個不同的route()連接到同一個function的話只要在原本route()的上或下接著輸入另一個即可。
 ```python3
 @app.route("/index") #新增
@@ -64,16 +68,20 @@ def test():
 def user_name(name):
 	return f"My name is {name}"
 ```
+
 ### Result
 ![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/route_variable3.png)
+
 而且你可以透過Flask中的converter來限制變數的型別。
 ```python3
 @app.route("/<int:id>") #如果id原本的型別是string，透過這裡就可以將其轉換成int的型別
 def user_id(id):
 	return f"My id is {id}"
 ```
+
 Converter 種類：
 ![image](https://github.com/bryanlin16899/Flask_Note/blob/main/image/converter_type4.png)
+
 copy from Flask documentation
 
 ### 透過"GET"、"POST"在html與Python間傳遞資料
